@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Convertor</title>
+    <style>
+        .app {
+            display: flex;
+            width: 400px;
+            margin: 2em auto;
+
+        }
+
+        .app select,
+        input {
+            width: 100%;
+
+        }
+
+        .col-1 {
+            margin-right: 2em;
+        }
+
+        .app label {
+            font-size: 150%;
+            font-weight: bolder;
+        }
+
+        .app input {
+            height: 2em;
+            background-color: black;
+            color: whitesmoke;
+        }
+
+        .app option {
+            height: 2em;
+            font-size: 110%;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;  ">Temperature Convertor</h1>
+    <hr>
+    <div class="app">
+
+        <div class="col-1">
+            <label for="input1">
+                From: <input onkeyup="convert()" type="text" id="input1" value="98.3">
+            </label>
+            <select onchange="convert()" id="unit1" size="3">
+                <option value="C">Celsius</option>
+                <option selected value="F">Fahrenheit</option>
+                <option value="K">Kelvin</option>
+            </select>
+        </div>
+        <div class="col-2">
+            <label for="input2">
+                To: <input disabled type="text" id="input2" value="36.8333333">
+            </label>
+            <select onchange="convert()" id="unit2" size="3">
+                <option selected value="C">Celsius</option>
+                <option value="F">Fahrenheit</option>
+                <option value="K">Kelvin</option>
+            </select>
+
+        </div>
+    </div>
+    <script>
+        function convert() {
+            let value = document.querySelector("#input1").value;
+            let unit1 = document.querySelector("#unit1").value;
+            let unit2 = document.querySelector("#unit2").value;
+            // console.log(value, unit1, unit2);
+            let result = "";
+            if (value !== "") {
+                result = calculate(parseFloat(value), unit1, unit2);
+            }
+            document.getElementById("input2").value = result;
+        }
+
+
+        function calculate(value, unit1, unit2) {
+            switch (unit1) {
+                case "C":
+                    switch (unit2) {
+                        case "C":
+                            return value;
+                        case "F":
+                            return 9 / 5 * value + 32;
+                        case "K":
+                            return value + 273.15;
+                    }
+                    break;
+                case "F":
+                    switch (unit2) {
+                        case "C":
+                            return 5 / 9 * (value - 32);
+                        case "F":
+                            return value;
+                        case "K":
+                            return 5 / 9 * (value - 32) + 273.15;
+                    }break;
+                case "K":
+                    switch (unit2) {
+                        case "C":
+                            return value - 273.15;
+                        case "F":
+                            return (value - 273.15) * 9 / 5 + 32;
+                        case "K":
+                            return value;
+                    }
+                    break;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

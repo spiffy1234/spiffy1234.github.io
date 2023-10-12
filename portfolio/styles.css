@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: sans-serif;
+}
+.app{
+    width: 90%;
+    margin: auto;
+}
+.nav{
+display: flex;
+list-style-type:  none;
+margin-top: 4em;
+
+}
+.nav li {
+flex: 1;
+
+
+
+}
+.nav li a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.nav li a:hover{
+    border-bottom: 2px solid ;
+}
+.header h1{
+    font-size: 400%;
+   padding: 0.5em; 
+}
+.projectheader{
+    margin-top: 2em ;
+    font-size: 200%;
+}
+.intro{
+    margin-top: 2em;
+    line-height: 1.7;
+    font-size: 200%;
+    background-color: tan;
+    padding:1em
+}
+
+.project{
+    list-style-type:  none;
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+    font-size: 120%;
+    
+}
+.project li {
+    padding: 2em 1.7em ;
+    background-color:  tan ;
+    
+    
+}
+.project li a{
+    text-decoration: none; 
+    
+    display:inline-block ;
+    font-size: 120%;
+}
+.project li:hover{
+    cursor: pointer;
+    border-left: 10px dodgerblue solid;
+
+}
+.details  h2{
+margin: 1.2em 0;
+}
+.details p{
+    line-height: 1.8;
+    font-size: 120%;
+}
+ 

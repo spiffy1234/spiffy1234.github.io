@@ -178,20 +178,21 @@ footer {
         margin-bottom: 20px;
     }
     
-    .introduction {
-        background-color: #fff3e0;
+    .introduction, .education {
         /* Soft yellow for introduction */
+        background-color: #e0f7fa;
     }
     
-    .education,
+    
     .career-objective {
-        background-color: #e0f7fa;
+        background-color: #fff3e0;
         /* Light cyan for education and career */
     }
     
     .hobbies {
         background-color: #f4e1e1;
         /* Soft pink for hobbies */
+        margin-top: 2em;
     }
     
     .hobbies p {
@@ -205,6 +206,7 @@ footer {
         /* Light green for skills section */
         padding: 1.5em;
         border-radius: 8px;
+        font-size: 120%;
     }
     
     .skills .skill-category {

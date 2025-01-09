@@ -1,80 +1,266 @@
+/* Global Styles */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-html{
-    font-family: sans-serif;
+html {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
-.app{
-    width: 90%;
-    margin: auto;
+body {
+    background-color: #fafafa;
+    /* Light gray background for better contrast */
+    margin: 0;
+    font-size: 16px;
+    color: #444;
 }
-.nav{
-display: flex;
-list-style-type:  none;
-margin-top: 4em;
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* App Container */
+.app {
+    width: 80%;
+    margin: auto;
+    background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    color: #2c3e50;
+    /* Darker shade for contrast */
+}
+
+.header p {
+    font-size: 1.2em;
+    color: #7f8c8d;
+    /* Lighter gray for less prominence */
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-bottom: 40px;
 }
 .nav li {
-flex: 1;
-
-
-
+    margin: 0 25px;
 }
-.nav li a{
+
+.nav li a {
     text-decoration: none;
+    color: #2c3e50;
+        /* Darker text for links */
+        font-size: 1.1em;
     text-transform: uppercase;
+    font-weight: bold;
 }
-.nav li a:hover{
-    border-bottom: 2px solid ;
+.nav li a:hover {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
 }
-.header h1{
-    font-size: 400%;
-   padding: 0.5em; 
-}
-.projectheader{
-    margin-top: 2em ;
-    font-size: 200%;
-}
-.intro{
-    margin-top: 2em;
-    line-height: 1.7;
-    font-size: 200%;
-    background-color: tan;
-    padding:1em
-}
-
-.project{
-    list-style-type:  none;
-    margin-top: 4em;
-    display: flex;
-    flex-direction: column;
-    font-size: 120%;
-    
-}
-.project li {
-    padding: 2em 1.7em ;
-    background-color:  tan ;
-    
-    
-}
-.project li a{
-    text-decoration: none; 
-    
-    display:inline-block ;
-    font-size: 120%;
-}
-.project li:hover{
-    cursor: pointer;
-    border-left: 10px dodgerblue solid;
-
-}
-.details  h2{
-margin: 1.2em 0;
-}
-.details p{
+/* Main Content */
+.intro {
+    margin: 20px 0;
+    font-size: 1.1em;
+    color: #444;
     line-height: 1.8;
-    font-size: 120%;
 }
- 
+
+.intro p {
+    margin-bottom: 15px;
+}
+
+.intro p:last-child {
+    margin-bottom: 0;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.social-media {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-media li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.social-media li a {
+    font-size: 1.2em;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.social-media li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .app {
+        width: 95%;
+    }
+
+    .header h1 {
+        font-size: 2.5em;
+    }
+
+    .header p {
+        font-size: 1.1em;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav li {
+        margin: 10px 0;
+    }
+
+    .intro p {
+        font-size: 1em;
+    }
+}
+/* Detailed Sections */
+.details,
+.skills,
+.projects,
+.contact {
+    margin-top: 3em;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+        margin-top: 3em;
+    }
+    
+    .details h2 {
+        font-size: 1.8rem;
+        color: #2c3e50;
+        margin-bottom: 1em;
+    }
+    
+    .details p {
+        line-height: 1.8;
+        font-size: 1.2rem;
+        color: #7f8c8d;
+    }
+    
+    /* Sections */
+    .introduction,
+    .hobbies,
+    .education,
+    .career-objective {
+        width: 45%;
+        padding: 1.5em;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    
+    .introduction {
+        background-color: #fff3e0;
+        /* Soft yellow for introduction */
+    }
+    
+    .education,
+    .career-objective {
+        background-color: #e0f7fa;
+        /* Light cyan for education and career */
+    }
+    
+    .hobbies {
+        background-color: #f4e1e1;
+        /* Soft pink for hobbies */
+    }
+    
+    .hobbies p {
+        font-size: 1.1rem;
+        margin-bottom: 0.5em;
+    }
+    
+    /* Skills */
+    .skills {
+        background-color: #e8f5e9;
+        /* Light green for skills section */
+        padding: 1.5em;
+        border-radius: 8px;
+    }
+    
+    .skills .skill-category {
+        margin-bottom: 2em;
+    }
+    
+    .skills .skill-category h3 {
+        font-size: 1.5rem;
+        color: #2c3e50;
+    }
+    
+    .skills ul {
+        list-style-type: none;
+    }
+    
+    .skills ul li {
+        font-size: 1.2rem;
+        color: #555;
+    }
+    
+    /* Projects */
+    .projects {
+        background-color: #e8f5e9;
+        padding: 1.5em;
+        border-radius: 8px;
+    }
+.projects ul {
+    list-style-type: none;
+}
+
+.projects ul li {
+    margin-bottom: 1.5em;
+}
+
+.projects h3 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+}
+
+/* Contact */
+.contact {
+    background-color: #f1f8e9;
+    /* Very light green for contact section */
+    padding: 1.5em;
+    border-radius: 8px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    color: #555;
+}
+.contact a {
+    color: #007bff;
+    /* Consistent blue for links */
+    text-decoration: none;
+}
+.contact a:hover {
+    text-decoration: underline;
+}
